@@ -2,7 +2,11 @@
     pageEncoding="UTF-8"%>
     <%@ page import="com.dao.ComplaintsDao, java.util.*, com.model.Complaints" %>
     <% ComplaintsDao cd=new ComplaintsDao();
+<<<<<<< HEAD
     	List<Complaints> list=cd.getUserComplaintsHistory();
+=======
+    	List<Complaints> list=cd.getUserComplaintsHistory((String) session.getAttribute("email"));
+>>>>>>> 8a58fe5 (added changes)
     %>
 <!DOCTYPE html>
 <html>

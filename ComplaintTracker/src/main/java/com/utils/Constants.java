@@ -19,5 +19,9 @@ public class Constants {
 	public static final String DELETE_COMPLAINT="delete from complaints where complaintId=?";
 	public static final String UPDATE_COMPLAINT="update complaints set userName=?,flatNo=?,complaint=?,phoneNumber=? where complaintId=?";
 	public static final String GET_COMPLAINT="select * from complaints where complaintId=?";
+<<<<<<< HEAD
 	public static final String GET_COMPLAINTS_HISTORY="select * from complaints where complaintstatus='resolved'";
+=======
+	public static final String GET_COMPLAINTS_HISTORY="select * from complaints where  email=? and complaintstatus='resolved'";
+>>>>>>> 8a58fe5 (added changes)
 }

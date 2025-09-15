@@ -129,12 +129,22 @@ public class ComplaintsDao {
 		return list;
 	}
 
+<<<<<<< HEAD
 	public List<Complaints> getUserComplaintsHistory(){
+=======
+	public List<Complaints> getUserComplaintsHistory(String email){
+>>>>>>> 8a58fe5 (added changes)
 		List<Complaints> list=new ArrayList<>();
 		try {
 			Connection connection = DBConnection.getConnection();
 			PreparedStatement statement = connection.prepareStatement(Constants.GET_COMPLAINTS_HISTORY);
+<<<<<<< HEAD
 			ResultSet rs = statement.executeQuery();
+=======
+			statement.setString(1, email);
+			ResultSet rs = statement.executeQuery();
+			
+>>>>>>> 8a58fe5 (added changes)
 			while(rs.next()) {
 				int id=rs.getInt(1);
 				String name = rs.getString(2);

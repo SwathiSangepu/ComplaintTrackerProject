@@ -19,10 +19,18 @@ import jakarta.servlet.http.HttpSession;
 public class ViewComplaintsServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+<<<<<<< HEAD
 		HttpSession session = req.getSession();
 //		ComplaintsDao cd=new ComplaintsDao();
 //		List<Complaints> userComplaints= cd.getUserComplaints((String) session.getAttribute("email"));
 //		req.setAttribute("complaintslist", userComplaints);
+=======
+		
+		ComplaintsDao cd=new ComplaintsDao();
+		HttpSession session = req.getSession(true);
+		List<Complaints> userComplaints= cd.getUserComplaints((String)session.getAttribute("email"));
+		req.setAttribute("complaintslist", userComplaints);
+>>>>>>> 8a58fe5 (added changes)
 		RequestDispatcher requestDispatcher = req.getRequestDispatcher("viewComplaints.jsp");
 		requestDispatcher.forward(req, resp);
 		
